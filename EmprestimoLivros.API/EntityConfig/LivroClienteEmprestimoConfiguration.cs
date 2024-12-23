@@ -1,7 +1,7 @@
 ﻿using EmprestimoLivros.API.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System.Data.Entity.ModelConfiguration;
+
 
 namespace EmprestimoLivros.API.EntityConfig
 {

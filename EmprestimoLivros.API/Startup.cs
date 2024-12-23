@@ -1,4 +1,6 @@
 using EmprestimoLivros.API.Context;
+using EmprestimoLivros.API.Interfaces;
+using EmprestimoLivros.API.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -29,7 +31,10 @@ namespace EmprestimoLivros.API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "EmprestimoLivros.API", Version = "v1" });
             });
             services.AddApplicationInsightsTelemetry();
+            services.AddScoped<IClienteRepository, ClienteRepository>();
         }
+
+           
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
