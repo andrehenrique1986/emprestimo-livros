@@ -1,0 +1,15 @@
+C:\Users\andre.silva\projetos\EmprestimoLivros\EmprestimoLivros.Application\bin\Debug\net5.0\EmprestimoLivros.Application.deps.json
+C:\Users\andre.silva\projetos\EmprestimoLivros\EmprestimoLivros.Application\bin\Debug\net5.0\EmprestimoLivros.Application.dll
+C:\Users\andre.silva\projetos\EmprestimoLivros\EmprestimoLivros.Application\bin\Debug\net5.0\ref\EmprestimoLivros.Application.dll
+C:\Users\andre.silva\projetos\EmprestimoLivros\EmprestimoLivros.Application\bin\Debug\net5.0\EmprestimoLivros.Application.pdb
+C:\Users\andre.silva\projetos\EmprestimoLivros\EmprestimoLivros.Application\bin\Debug\net5.0\EmprestimoLivros.Domain.dll
+C:\Users\andre.silva\projetos\EmprestimoLivros\EmprestimoLivros.Application\bin\Debug\net5.0\EmprestimoLivros.Domain.pdb
+C:\Users\andre.silva\projetos\EmprestimoLivros\EmprestimoLivros.Application\obj\Debug\net5.0\EmprestimoLivros.Application.csproj.AssemblyReference.cache
+C:\Users\andre.silva\projetos\EmprestimoLivros\EmprestimoLivros.Application\obj\Debug\net5.0\EmprestimoLivros.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andre.silva\projetos\EmprestimoLivros\EmprestimoLivros.Application\obj\Debug\net5.0\EmprestimoLivros.Application.AssemblyInfoInputs.cache
+C:\Users\andre.silva\projetos\EmprestimoLivros\EmprestimoLivros.Application\obj\Debug\net5.0\EmprestimoLivros.Application.AssemblyInfo.cs
+C:\Users\andre.silva\projetos\EmprestimoLivros\EmprestimoLivros.Application\obj\Debug\net5.0\EmprestimoLivros.Application.csproj.CoreCompileInputs.cache
+C:\Users\andre.silva\projetos\EmprestimoLivros\EmprestimoLivros.Application\obj\Debug\net5.0\EmprestimoLivros.Application.csproj.CopyComplete
+C:\Users\andre.silva\projetos\EmprestimoLivros\EmprestimoLivros.Application\obj\Debug\net5.0\EmprestimoLivros.Application.dll
+C:\Users\andre.silva\projetos\EmprestimoLivros\EmprestimoLivros.Application\obj\Debug\net5.0\ref\EmprestimoLivros.Application.dll
+C:\Users\andre.silva\projetos\EmprestimoLivros\EmprestimoLivros.Application\obj\Debug\net5.0\EmprestimoLivros.Application.pdb

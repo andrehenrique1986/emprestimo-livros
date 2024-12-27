@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EmprestimoLivros.Application\EmprestimoLivros.Application.csproj" />
+    <ProjectReference Include="..\EmprestimoLivros.Domain\EmprestimoLivros.Domain.csproj" />
+    <ProjectReference Include="..\EmprestimoLivros.Infra.Data\EmprestimoLivros.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>
