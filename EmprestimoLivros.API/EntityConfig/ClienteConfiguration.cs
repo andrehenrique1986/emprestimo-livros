@@ -11,25 +11,47 @@ namespace EmprestimoLivros.API.EntityConfig
         {
             builder.HasKey(c => c.Id);
 
-            builder.Property(c => c.CPF)
+            builder.Property(c => c.CliCpf)
                 .IsRequired()
-                .HasMaxLength(14);
+                .HasMaxLength(14).
+                HasColumnName("cliCPF");
 
-            builder.Property(c => c.Nome)
+            builder.Property(c => c.CliNome)
                 .IsRequired()
-                .HasMaxLength(100);
+                .HasMaxLength(100)
+                .HasColumnName("cliNome");
 
-            builder.Property(c => c.Endereco)
+            builder.Property(c => c.CliEndereco)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(50)
+                .HasColumnName("cliEndereco");
 
-            builder.Property(c => c.Cidade)
+            builder.Property(c => c.CliCidade)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(50)
+                .HasColumnName("cliCidade");
 
-            builder.Property(c => c.Bairro)
+            builder.Property(c => c.CliBairro)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(50)
+                .HasColumnName("cliBairro");
+
+            builder.Property(c => c.CliNumero)
+                .IsRequired()
+                .HasMaxLength(50)
+                .HasColumnName("cliNumero");
+
+            builder.Property(c => c.CliTelefoneCelular)
+                .IsRequired()
+                .HasMaxLength(14)
+                .HasColumnName("cliTelefoneCelular");
+
+            builder.Property(c => c.CliTelefoneFixo)
+                .IsRequired()
+                .HasMaxLength(13)
+                .HasColumnName("cliTelefoneFixo");
+
+         
         }
     }
 }

@@ -4,14 +4,16 @@ using EmprestimoLivros.API.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EmprestimoLivros.API.Migrations
 {
     [DbContext(typeof(ControleEmprestimoContext))]
-    partial class ControleEmprestimoContextModelSnapshot : ModelSnapshot
+    [Migration("20241226191610_CorrigindoCPF")]
+    partial class CorrigindoCPF
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -1,5 +1,6 @@
 using EmprestimoLivros.API.Context;
 using EmprestimoLivros.API.Interfaces;
+using EmprestimoLivros.API.Mappings;
 using EmprestimoLivros.API.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,6 +33,7 @@ namespace EmprestimoLivros.API
             });
             services.AddApplicationInsightsTelemetry();
             services.AddScoped<IClienteRepository, ClienteRepository>();
+            services.AddAutoMapper(typeof(EntitiesToDTOMappingProfile));
         }
 
            
