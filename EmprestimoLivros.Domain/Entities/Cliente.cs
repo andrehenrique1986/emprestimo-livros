@@ -16,6 +16,7 @@ namespace EmprestimoLivros.Domain.Entities
         public string CliTelefoneFixo { get; private set; }
 
         public ICollection<Emprestimo> Emprestimos { get; set; }
+      
 
         public Cliente(
             int id, 
@@ -43,6 +44,7 @@ namespace EmprestimoLivros.Domain.Entities
                 );
         }
 
+       
         public void Update(
                string cliCpf,
                string cliNome,

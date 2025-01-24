@@ -5,6 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.17" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\EmprestimoLivros.Application\EmprestimoLivros.Application.csproj" />
     <ProjectReference Include="..\EmprestimoLivros.Domain\EmprestimoLivros.Domain.csproj" />
     <ProjectReference Include="..\EmprestimoLivros.Infra.Data\EmprestimoLivros.Infra.Data.csproj" />
