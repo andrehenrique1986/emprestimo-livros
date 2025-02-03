@@ -24,7 +24,7 @@ namespace EmprestimoLivros.Domain.Entities
             string livroEdicao
             )
         {
-            DomainExceptionValidation.When(id > 0, "O ID do cliente deve ser positivo.");
+            DomainExceptionValidation.When(id < 0, "O ID do livro deve ser positivo.");
             Id = id;
             Validatedomain(
                 livroNome,

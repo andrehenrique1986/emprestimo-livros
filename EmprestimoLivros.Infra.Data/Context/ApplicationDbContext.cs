@@ -1,5 +1,7 @@
 ﻿using EmprestimoLivros.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Threading.Tasks;
 
 namespace EmprestimoLivros.Infra.Data.Context
 {
@@ -22,5 +24,6 @@ namespace EmprestimoLivros.Infra.Data.Context
             base.OnModelCreating(builder);
             builder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
         }
+
     }
 }

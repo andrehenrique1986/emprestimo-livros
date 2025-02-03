@@ -1,0 +1,16 @@
+﻿using EmprestimoLivros.Domain.Entities;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace EmprestimoLivros.Domain.Interfaces
+{
+    public interface IEmprestimoRepository
+    {
+        Task<Emprestimo> Incluir(Emprestimo emprestimo);
+        Task<Emprestimo> Alterar(Emprestimo emprestimo);
+        Task<Emprestimo> Excluir(int id);
+        Task<Emprestimo> SelecionarAsync(int id);
+        Task<IEnumerable<Emprestimo>> SelecionarTodosAsync();
+        Task<bool> VerificarDisponibilidadeAsync(int idLivro);
+    }
+}

@@ -1,5 +1,9 @@
-﻿using EmprestimoLivros.Application.Interfaces;
+﻿using EmprestimoLivros.API.Extentions;
+using EmprestimoLivros.API.Models;
+using EmprestimoLivros.Application.Interfaces;
+using EmprestimoLivros.Infra.Ioc;
 using EmprestimoLivrosNovo.Application.DTOs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -7,14 +11,17 @@ namespace EmprestimoLivros.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class ClienteController : Controller
     {
 
         private readonly IClienteService _clienteService;
+        private readonly IUsuarioService _usuarioService;
 
-        public ClienteController(IClienteService clienteService)
+        public ClienteController(IClienteService clienteService, IUsuarioService usuarioService)
         {
             _clienteService = clienteService;
+            _usuarioService = usuarioService;
         }
 
 
@@ -44,6 +51,14 @@ namespace EmprestimoLivros.API.Controllers
         [HttpDelete("/excluirCliente/{id}")]
         public async Task<ActionResult> Excluir(int id)
         {
+            var userId = User.GetId();
+            var usuario = await _usuarioService.SelecionarAsync(userId);
+
+            if (!usuario.IsAdmin)
+            {
+                return Unauthorized("Você não tem permissão para excluir os clientes.");
+            }
+
             var clienteDTOExcluido = await _clienteService.Excluir(id);
             if (clienteDTOExcluido == null)
             {
@@ -64,10 +79,19 @@ namespace EmprestimoLivros.API.Controllers
         }
 
         [HttpGet("/listarClientes")]
-        public async Task<ActionResult> SelecionarTodos()
+        public async Task<ActionResult> SelecionarTodos([FromQuery]PaginationParams paginationParams)
         {
-            var clienteDTO = await _clienteService.SelecionarTodosAsync();
-            return Ok(clienteDTO);
+            var clientesDTO = await _clienteService.SelecionarTodosAsync(paginationParams.PageNumber, paginationParams.PageSize);
+
+            Response.AddPaginationHeader(new PaginationHeader
+                (
+                clientesDTO.CurrentPage, 
+                clientesDTO.PageSize, 
+                clientesDTO.TotalCount, 
+                clientesDTO.TotalPage
+                ));
+
+            return Ok(clientesDTO);
         }
 
 

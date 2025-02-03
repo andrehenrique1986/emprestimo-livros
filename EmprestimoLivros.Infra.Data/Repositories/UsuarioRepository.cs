@@ -2,7 +2,6 @@
 using EmprestimoLivros.Domain.Interfaces;
 using EmprestimoLivros.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -35,6 +34,11 @@ namespace EmprestimoLivros.Infra.Data.Repositories
                 return usuario;
             }
             return null;
+        }
+
+        public async Task<bool> ExisteUsuarioCadastradoAsync()
+        {
+            return await _context.Usuario.AnyAsync();
         }
 
         public async Task<Usuario> Incluir(Usuario usuario)

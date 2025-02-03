@@ -1,5 +1,5 @@
 ﻿using EmprestimoLivros.Domain.Entities;
-using System.Collections.Generic;
+using EmprestimoLivros.Domain.Pagination;
 using System.Threading.Tasks;
 
 namespace EmprestimoLivros.Domain.Interfaces
@@ -10,6 +10,6 @@ namespace EmprestimoLivros.Domain.Interfaces
         Task<Cliente> Alterar(Cliente cliente);
         Task<Cliente> Excluir(int id);
         Task<Cliente> SelecionarAsync(int id);
-        Task<IEnumerable<Cliente>> SelecionarTodosAsync();
+        Task<PagedList<Cliente>> SelecionarTodosAsync(int pageNumber, int pageSize);
     }
 }

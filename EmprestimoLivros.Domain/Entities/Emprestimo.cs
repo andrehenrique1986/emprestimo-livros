@@ -1,6 +1,5 @@
 ﻿using EmprestimoLivros.Domain.Validation;
 using System;
-using System.Collections.Generic;
 
 namespace EmprestimoLivros.Domain.Entities
 {
